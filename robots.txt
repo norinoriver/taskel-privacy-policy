@@ -1,0 +1,9 @@
+# 原稿が仮置き（{{TODO:...}} が残っている）うちは検索エンジンに拾わせない。
+# 各 HTML の <meta name="robots" content="noindex, nofollow"> と対にしてある。
+#
+# 本文を確定して公開するときは、この2行を
+#   User-agent: *
+#   Disallow:
+# に変え、各 HTML の noindex meta タグも消すこと。
+User-agent: *
+Disallow: /
