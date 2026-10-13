@@ -5,6 +5,7 @@ Taskel（iOS アプリ）のプライバシーポリシーと利用規約。GitH
 
 - 内容の正はアプリ本体リポジトリの `docs/legal/`。ここは公開物（HTML）。
 - **まだ下書き（draft）。** `{{TODO:...}}` が残っている間は公開扱いにしない（各 HTML に draft バナーと `noindex` がある）。
+- 公開してよいのは、Crashlytics（#110）と Analytics（#112）の実装が入り、Firebase で Analytics を有効化した後。
 - v2 以降で Cloudflare Workers へ移す予定。
 - 注意: `app-ads.txt` は AdMob がドメイン直下（`https://<domain>/app-ads.txt`）しか読まない。
   プロジェクトサイト（`https://norinoriver.github.io/taskel-privacy-policy/`）では直下にならないので、
