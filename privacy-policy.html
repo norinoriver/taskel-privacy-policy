@@ -13,7 +13,7 @@
   <h1>Taskel Privacy Policy</h1>
   <p class="meta">
     Effective date: <span class="todo">{{TODO:公開日}}</span> ·
-    Version 0.2 (draft — not yet in force)
+    Version 1.0 (draft — not yet in force)
   </p>
 </header>
 
@@ -22,293 +22,79 @@
     <p><strong>This is a draft.</strong> It is not yet in force and must not be
     linked from the App Store listing or from inside the app. Every
     <span class="todo">{{TODO:…}}</span> marker below is an unresolved item.</p>
-    <p>When all markers are gone, delete this banner and the
-    <code>noindex</code> meta tag, set the effective date, and change the
-    version to 1.0.</p>
+    <p>When all markers are gone, delete this banner, the “Draft notes” box and the
+    <code>noindex</code> meta tag, and set the effective date. The
+    version is already 1.0.</p>
   </div>
 
-  <h2>1. Who We Are</h2>
-  <p>Taskel (“<strong>Taskel</strong>,” “<strong>we</strong>,”
-  “<strong>us</strong>”) is a habit and routine management app for iOS,
-  developed and operated by an individual developer.</p>
-  <ul>
-    <li><strong>Operator:</strong> <span class="todo">{{TODO:事業者名}}</span></li>
-    <li><strong>Address:</strong> <span class="todo">{{TODO:住所}}</span></li>
-    <li><strong>Contact:</strong> <span class="todo">{{TODO:サポートメール}}</span></li>
-    <li><strong>EU representative:</strong> <span class="todo">{{TODO:EU代理人}}</span></li>
-    <li><strong>UK representative:</strong> <span class="todo">{{TODO:UK代理人}}</span></li>
-    <li><strong>Data Protection Officer (DPO):</strong> not currently
-    appointed. At Taskel’s current scale as an individual-developer app,
-    GDPR Article 37 (which targets large-scale, regular and systematic
-    monitoring) does not appear to require one. We will revisit this if
-    advertising materially increases the scale of Taskel’s data
-    processing.</li>
-  </ul>
-
-  <h2>2. Scope</h2>
-  <p>This policy applies to the Taskel iOS app and to this website. Taskel is
-  distributed in English only, for iOS only — there is no Android or web
-  version today. If that changes, we will update this policy’s scope
-  accordingly. Taskel is offered on the App Store in
-  <span class="todo">{{TODO:配信国}}</span>; this policy is written for
-  users in those countries, and we will revise it before adding
-  countries whose law it does not already cover.</p>
-
-  <h2>3. Data We Process</h2>
-  <p>What we process depends on how you use Taskel:</p>
-  <ul>
-    <li><strong>If you use Taskel without signing in (“guest” mode):</strong>
-    a random identifier (a UUID), generated on your device, used only to
-    label the data stored on that device. We do not collect your name,
-    email address, or any other personal information in this mode.</li>
-    <li><strong>If you sign in with Apple:</strong> Apple issues Taskel a
-    stable, opaque identifier for your Apple ID’s relationship with this
-    app; that identifier is what we store. Taskel’s sign-in request also
-    asks Apple for permission to share your name and email address, as part
-    of Apple’s standard sign-in flow, and if you choose “Hide My Email,”
-    Apple may forward a private relay email address as part of that
-    exchange. <strong>Taskel’s app code does not read or store your name or
-    email address — real or private-relay — only the opaque identifier
-    above is kept.</strong> How Apple itself handles the values it offers
-    during sign-in is covered by Apple’s own Privacy Policy (linked in
-    Section 8).</li>
-    <li><strong>If you sign in with Google:</strong> the Google Sign-In SDK
-    returns, and Taskel stores, a stable user identifier for your Google
-    Account’s relationship with this app. Per Google’s own disclosure for
-    this SDK, it also processes your device’s IP address, which Google uses
-    for coarse, fraud-prevention location estimation (for example, flagging
-    sign-in attempts from an unexpected location) — this happens between
-    your device and Google directly, not through any server we
-    operate.</li>
-    <li><strong>Your habit, routine, task, and execution data:</strong>
-    stored only on your device — see Section 4. We do not receive it.</li>
-    <li><strong>Once advertising is added</strong> (not yet implemented —
-    see Section 6), the advertising SDK will introduce additional data
-    categories, such as device/advertising identifiers, coarse IP-derived
-    location, and ad-interaction data. This section will be revised to
-    reflect the actual configuration before that version ships.</li>
-  </ul>
-
-  <h2>4. Local-Only Habit and Routine Data</h2>
-  <p>Everything you create in Taskel — routines, tasks, execution history,
-  and statistics — is stored locally on your device using Apple’s SwiftData
-  framework. We do not operate a server that receives, stores, or backs up
-  this data; it is not synced or uploaded anywhere. Taskel’s own code makes
-  no network requests to transmit it (we verified this by confirming the
-  app contains no use of <code>URLSession</code>, the standard iOS
-  networking API).</p>
-  <p><strong>The one exception to “nothing leaves the device” is a
-  third-party SDK’s own communication</strong> — specifically, the sign-in
-  SDKs described in Section 3, and, once implemented, an advertising SDK
-  (Section 6). Those SDKs communicate directly with their provider’s own
-  servers, under that provider’s own privacy practices; none of that
-  traffic passes through, or is logged by, any server we operate.</p>
-
-  <h2>5. How We Use Data</h2>
-  <p>We use the information described in Section 3 only to:</p>
-  <ul>
-    <li>let you use the same sign-in across sessions on this device;</li>
-    <li>attribute your locally-stored data to your sign-in identifier
-    instead of a random guest identifier, once you sign in;</li>
-    <li>help prevent fraudulent or abusive sign-in activity (this is what
-    Google’s coarse, IP-based location estimate in Section 3 is for);
-    and</li>
-    <li>once advertising is implemented, select and measure the ads shown
-    to you (Section 6).</li>
-  </ul>
-  <p>We do not use your information for any other purpose — for example,
-  profiling unrelated to the above, or selling it (Section 8).</p>
-
-  <h2>6. Advertising</h2>
-  <p>Taskel does not currently show advertising, and no advertising SDK is
-  included in the app as of this policy’s effective date.</p>
-  <p>We plan to introduce advertising in a future version, expected to use
-  <span class="todo">{{TODO:広告SDK}}</span>. Before that version ships,
-  this section (and Taskel’s App Store “App Privacy” disclosure) will be
-  rewritten to match the actual SDK configuration. Our current working plan
-  is:</p>
-  <ul>
-    <li><strong>Start with contextual / non-personalized ads</strong>, not
-    ads personalized to you individually, and avoid collecting your
-    device’s advertising identifier (IDFA) where the ad configuration
-    allows it.</li>
-    <li><strong>App Tracking Transparency (ATT):</strong> Apple requires an
-    ATT permission prompt if the advertising in Taskel collects your
-    device’s advertising identifier, links your device/account identifiers
-    with data from other companies to serve or measure targeted ads, shares
-    identifiers with an ad network in a way that enables retargeting, or
-    performs cross-app or cross-site ad measurement. <strong>Including an
-    ad SDK without showing an ATT prompt does not, by itself, satisfy this
-    requirement</strong> — whether ATT applies depends on the ad SDK’s
-    actual configuration and network behavior, which we will verify against
-    Apple’s and Google’s documentation before release rather than
-    assume.</li>
-    <li><strong>Consent for EEA / UK / Switzerland:</strong> if Taskel
-    serves personalized advertising to users in the EEA, UK, or
-    Switzerland, Google requires use of a Google-certified Consent
-    Management Platform (CMP) integrated with the IAB Transparency &amp;
-    Consent Framework (TCF) — in practice, Google’s User Messaging Platform
-    (UMP) SDK — to obtain consent before any ad request. ATT and this
-    consent mechanism address different legal requirements; neither
-    substitutes for the other.</li>
-    <li>Data types the advertising SDK may process, once implemented, can
-    include: device/advertising identifiers, technical/network information
-    such as IP address, and information about ads shown to and interacted
-    with. The exact set depends on the SDK version, ad format, and any
-    mediation partners in use at the time.</li>
-    <li>If Taskel is ever placed in an audience or category directed at
-    children under 13, personalized advertising will not be used for that
-    audience, consistent with Section 12.</li>
-  </ul>
-  <p><strong>Using a third-party advertising SDK does not reduce Taskel’s
-  responsibility for what that SDK collects and how it’s used</strong> —
-  including declaring it accurately here and in the App Store’s App Privacy
-  labels, and obtaining any permission or consent (ATT, CMP) the SDK’s
-  actual behavior requires. “The SDK collected it, not our own code” is not
-  treated as an exemption.</p>
-
-  <h2>7. Legal Bases for Processing (EEA / UK Users)</h2>
-  <p>For users in the EEA or UK, we process the data described in Section 3
-  on the following legal bases under the GDPR / UK GDPR:</p>
-  <ul>
-    <li><strong>Authentication (Sign in with Apple / Google):</strong>
-    performance of a contract with you — providing the sign-in feature you
-    chose to use — and, for the fraud-prevention aspect of Google’s coarse
-    location check, our legitimate interest in keeping sign-in secure,
-    balanced against your rights.</li>
-    <li><strong>Advertising, once implemented:</strong> we intend to rely on
-    your consent for personalized advertising and related measurement shown
-    to EEA/UK users, obtained through the CMP described in Section 6,
-    rather than on legitimate interest. You can withdraw that consent at
-    any time (Section 11) once those in-app controls exist.</li>
-  </ul>
-
-  <h2>8. How We Share Data</h2>
-  <p>We do not sell your personal information, and we do not share it with
-  third parties for their own independent marketing purposes. The only
-  recipients of the limited data described in Section 3 are:</p>
-  <ul>
-    <li><strong>Apple and Google</strong>, as providers of the optional
-    sign-in features you choose to use — see their own privacy policies:
-    <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a>
-    and
-    <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
-    <li><strong>Once advertising is implemented (Section 6): our
-    advertising SDK provider(s)</strong>, together with any mediation
-    partners they use, for the purpose of serving and measuring ads;
-    and</li>
-    <li>anyone we’re required to disclose information to by law, or to
-    protect Taskel’s, our users’, or others’ rights, safety, or
-    property.</li>
-  </ul>
-  <p>We do not otherwise share your data with third parties. If
-  advertising-related sharing is later found to meet the definition of a
-  “sale” or “share” of personal information under a law such as the
-  CCPA/CPRA, we will update this section and provide any required opt-out
-  before that applies.</p>
-
-  <h2>9. International Data Transfers</h2>
-  <p>Because Taskel does not operate a server that receives your
-  habit/routine or account data, we do not ourselves transfer that data
-  internationally. Where you sign in, or once advertising is implemented,
-  the identifiers and technical data described in Section 3 may be
-  processed by Apple, Google, or an advertising partner outside your
-  country of residence, under their own privacy policies and any safeguards
-  they apply to international transfers (for example, GDPR Chapter V
-  mechanisms, where relevant).</p>
-
-  <h2>10. Retention and Deletion</h2>
-  <ul>
-    <li><strong>Local habit/routine/task data and your sign-in
-    identifier</strong> are retained only on your device, for as long as you
-    keep them there. You can remove them using Taskel’s in-app deletion
-    control, or by uninstalling the app — see Section 11 for details.</li>
-    <li><strong>Sign-in and, once implemented, advertising SDK data</strong>
-    held by Apple, Google, or an ad partner follows their own retention
-    policies; we do not control it directly. Section 11 explains your
-    options for managing it.</li>
-    <li>We do not retain any copy of your data beyond the above, because we
-    never receive it in the first place.</li>
-    <li>Nothing here overrides retention we may be legally required to
-    observe (for example, in response to a valid legal request); we are not
-    currently aware of any such obligation applying to Taskel.</li>
-  </ul>
-
-  <h2>11. Your Rights and Choices</h2>
-  <p>Depending on where you live, you may have rights under laws such as
-  Japan’s APPI, the EU/UK GDPR, the California CCPA/CPRA, or Brazil’s LGPD
-  — for example, to access, correct, delete, or export your personal
-  information, to object to or restrict certain processing, to withdraw
-  consent, and to lodge a complaint with your local data protection
-  authority.</p>
-  <p>In practice, because Taskel does not store your habit/routine or
-  account data on any server:</p>
-  <ul>
-    <li><strong>Access / correction / export:</strong> your data is visible
-    and editable directly in the app at all times; there is nothing held
-    elsewhere for us to act on separately.</li>
-    <li><strong>Deletion:</strong> Apple requires apps that offer account
-    creation to let users start deletion from inside the app, so we treat
-    an in-app “Delete Account” control in Settings as required, not
-    optional (not yet available as of this policy’s effective date). Once
-    available, it will permanently remove your locally-stored sign-in
-    identifier and all locally-stored routines, tasks, and execution
-    history, and return the app to its first-launch state; this cannot be
-    undone. <strong>Until it ships, uninstalling the app achieves the same
-    result</strong> — because nothing is sent to us, there is nothing left
-    on our side to delete separately.</li>
-    <li><strong>Sign-in management:</strong> you can stop using Sign in with
-    Apple/Google for Taskel, and review what those providers know about the
-    connection, through your Apple ID or Google Account settings at any
-    time.</li>
-    <li><strong>Advertising choices, once implemented:</strong> you will be
-    able to withdraw advertising consent and manage ad personalization
-    through in-app controls described in Section 6.</li>
-    <li>For anything not covered above — including a formal data-subject
-    request or a complaint to your local supervisory authority — contact us
-    using Section 15.</li>
-  </ul>
-
-  <h2>12. Children</h2>
-  <p><strong>Age Requirement:</strong> Taskel is intended for users aged
-  <span class="todo">{{TODO:対象年齢}}</span> and older. We do not knowingly
-  collect personal information from children below that age. If you believe
-  a child has provided personal information to us, please contact us at
-  <span class="todo">{{TODO:サポートメール}}</span> and we will address it,
-  including deletion where appropriate (Section 10).</p>
-
-  <h2>13. Security</h2>
-  <p>We take reasonable, common-sense measures appropriate to an app that
-  keeps your data on your own device rather than on a server we operate:
-  your habit/routine data is never transmitted, and your sign-in identifier
-  is stored using standard iOS app-data storage. No method of storage or
-  transmission is completely secure, and we cannot guarantee absolute
-  security — the same is true of any app or service. Your device’s own
-  security (passcode, encryption, and so on) is an important part of
-  protecting the data Taskel stores on it.</p>
-
-  <h2>14. Changes to This Policy</h2>
-  <p>We will update the “Effective date” and “Version” at the top of this
-  page whenever we revise it. Not every change gets the same level of
-  notice:</p>
-  <ul>
-    <li><strong>Minor changes</strong> (typo fixes, contact-detail updates,
-    wording clarifications) are reflected here with an updated effective
-    date, with no separate notice.</li>
-    <li><strong>Material changes</strong> — such as adding a new advertising
-    SDK, adding new tracking or IDFA use, changing advertising vendors or
-    purposes for EEA/UK users, lowering the minimum age below 13, or
-    starting to share data with a new type of third party or a cloud-sync
-    feature — will also be called out somewhere you’re likely to see it
-    (for example, an in-app notice), in addition to updating this
-    page.</li>
-  </ul>
-
-  <h2>15. Contact Us</h2>
-  <p>Questions about this policy, or requests concerning your data, can be
-  sent to: <span class="todo">{{TODO:サポートメール}}</span></p>
-  <p>Operator: <span class="todo">{{TODO:事業者名}}</span> ·
-  Address: <span class="todo">{{TODO:住所}}</span></p>
+<h2>1. Who We Are</h2>
+<p>Taskel (“<strong>Taskel</strong>,” “<strong>we</strong>,” “<strong>us</strong>”) is a habit and routine management app for iOS, developed and operated by an individual developer. The developer’s name as shown on the App Store listing is the operator’s name.</p>
+<ul><li><strong>Contact:</strong> use the <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUROr77HWACQ8rz2DTfblksosLqy8oML0OHcJef7Gi4M2fZw/viewform">contact form</a> (see Section 5.2). You can also reach it from Settings &gt; Support &gt; Contact in the app.</li><li><strong>Data protection officer / local representatives:</strong> none. Taskel is not offered in the European Union, the United Kingdom, or Canada (Section 2), and we do not run a server that holds your data (Section 3).</li></ul>
+<h2>2. Scope and Where Taskel Is Offered</h2>
+<p>This policy applies to the Taskel iOS app and to the website that hosts this document. Taskel is available in English only, for iOS only.</p>
+<p>Taskel is offered on the App Store in <strong>Japan, the United States, Australia, and New Zealand</strong> only. This policy is written for users in those countries. We will revise it before adding any other country whose law it does not already cover.</p>
+<h2>3. Your Habit Data Stays on Your Device</h2>
+<p>Everything you create in Taskel (routines, tasks, goals, schedules, execution history, statistics, and settings) is stored only on your device, using Apple’s SwiftData framework. Taskel has no account and no sign-in. We do not operate a server that receives, stores, or backs up this data, and Taskel’s own code does not send it anywhere.</p>
+<p>Reminders and notifications Taskel shows are scheduled on your device by iOS (local notifications). Widgets and Live Activities read the same on-device data. None of this leaves your device.</p>
+<p><strong>What can leave your device is limited to three things:</strong> communication by the advertising SDK (Section 6), crash reports sent by Firebase Crashlytics (Section 5.3), and the contact form if you choose to use it (Section 5.2). A backup file you export yourself (Section 4) goes only where you put it.</p>
+<h2>4. Backing Up and Restoring Your Data</h2>
+<p>Settings &gt; Data lets you export and import a backup.</p>
+<ul><li><strong>Export backup</strong> writes all your Taskel data (routines with their hierarchy and order, tasks, goals, schedules, execution records, and a few settings) into one JSON file. iOS asks you where to save it. Taskel itself does not upload the file anywhere and does not encrypt it, so anyone who can open the file can read its contents.</li><li><strong>If you save the file to a cloud location</strong> such as iCloud Drive, or to another provider’s storage that appears in the Files app, that provider stores and handles the file under its own terms and privacy policy, not under ours. We do not receive a copy.</li><li><strong>Import backup</strong> reads a file you pick, checks it, and, after you confirm, replaces the data currently in the app with the file’s contents. The file is read on your device and is not sent to us or to anyone else.</li></ul>
+<h2>5. Information We Receive or That Is Sent to Others</h2>
+<h3>5.1 Advertising (Google AdMob)</h3>
+<p>See Section 6 for details of what Google receives and your choices.</p>
+<h3>5.2 Contact Form</h3>
+<p>Settings &gt; Support &gt; Contact opens a Google Form. The form does not require you to sign in to Google and does not automatically collect your email address.</p>
+<ul><li><strong>What we receive:</strong> what you type into the form (your message and the email address you enter if you want a reply), plus the <strong>Taskel app version (and build number) and the iOS version</strong>, which the app fills in for you and which you can edit or delete before sending. We do not fill in anything else from your device.</li><li><strong>Why:</strong> to read and answer your question or request, and to understand which versions are affected.</li><li><strong>Where it is stored:</strong> the form is provided by Google, so your response is stored on Google’s servers in the developer’s Google account, under Google’s privacy policy (https://policies.google.com/privacy). Google may also process technical data (such as your IP address) when you open and submit the form.</li><li><strong>Replies:</strong> we reply to the email address you wrote in the form, from the operator’s email address.</li><li><strong>How long we keep it:</strong> We try not to keep information longer than necessary to fulfill the purposes for which it was collected.</li><li>Please do not include sensitive information in the form. You can ask us to delete your submission by writing to us again through the form.</li></ul>
+<h3>5.3 Crash Reports (Firebase Crashlytics)</h3>
+<p>Taskel uses <strong>Firebase Crashlytics</strong>, a crash-reporting service provided by Google, to learn when the app crashes so we can investigate and fix the problem. Taskel uses Crashlytics only; it does not use Firebase/Google Analytics.</p>
+<ul><li><strong>What is sent:</strong> when the app crashes, Crashlytics receives the default crash information: the stack trace, the state of the app at the time of the crash, device and operating-system information (such as device model and iOS version), and a Crashlytics installation identifier that distinguishes installations of the app.</li><li><strong>What we do not send:</strong> Taskel does not attach a user ID, custom log messages, or custom keys to crash reports, and does not give Crashlytics your routines, tasks, or other habit data. Taskel has no account, so crash reports are not linked to who you are.</li><li><strong>Why:</strong> to investigate crashes and improve the app’s quality. We do not use crash reports for advertising or tracking.</li><li><strong>Provider and retention:</strong> the service is provided by Google. According to Google’s Firebase documentation, crash stack traces and associated identifiers are retained for 90 days.</li><li><strong>More information:</strong> Firebase privacy and security information (https://firebase.google.com/support/privacy) and Google’s Privacy Policy (https://policies.google.com/privacy).</li></ul>
+<h3>5.4 Apple</h3>
+<p>Downloading Taskel from the App Store, and any crash or analytics reports you choose to share with developers through iOS settings, are handled by Apple under its own privacy policy (https://www.apple.com/legal/privacy/). We do not control that.</p>
+<h2>6. Advertising and Tracking Choices</h2>
+<p>Taskel is free and shows ads. It uses <strong>Google AdMob</strong> (the Google Mobile Ads SDK, which is included in the app). Ads appear as banner, full-screen (interstitial, including video), and in-list native ads. Apart from the crash-reporting service in Section 5.3, Taskel itself does not use any other analytics or tracking service.</p>
+<h3>6.1 What Google may receive and collect</h3>
+<p>The SDK communicates directly between your device and Google’s servers. It does not pass through any server we operate, and Taskel does <strong>not</strong> give the SDK your routines, tasks, or other habit data. Depending on your choices below, Google may collect:</p>
+<ul><li><strong>device identifiers</strong>, including the advertising identifier (IDFA) <strong>only if you allow tracking</strong> (Section 6.2);</li><li><strong>IP address</strong>, and <strong>coarse location</strong> derived from it;</li><li><strong>ad interaction data</strong> (ads shown, clicked, or closed) and product interaction in ads;</li><li><strong>diagnostics, performance, and crash data</strong> for the SDK.</li></ul>
+<p>Google uses this data to serve, measure, and limit the frequency of ads, to prevent fraud and abuse, and to improve its services. How Google handles it is described in Google’s pages:</p>
+<ul><li>How Google uses information from sites or apps that use its services: <a href="https://policies.google.com/technologies/partner-sites">https://policies.google.com/technologies/partner-sites</a></li><li>Google Privacy Policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li><li>Google Mobile Ads SDK data disclosure: <a href="https://developers.google.com/admob/ios/privacy/data-disclosure">https://developers.google.com/admob/ios/privacy/data-disclosure</a></li></ul>
+<h3>6.2 App Tracking Transparency and personalized ads</h3>
+<p>On first launch, after the notification permission, Taskel shows a short explanation and then Apple’s App Tracking Transparency (ATT) prompt.</p>
+<ul><li><strong>If you allow tracking:</strong> Google can use your advertising identifier (IDFA) to show ads that match your interests (personalized ads) and to measure ads, which may include linking with data from other companies' apps and websites that use Google’s services. <strong>This is the only tracking in Taskel.</strong> Taskel’s own code does not track you.</li><li><strong>If you do not allow tracking</strong> (or tracking is restricted on your device): the SDK does not use the IDFA, and Taskel asks Google to show non-personalized ads only. You still see ads; they are just less relevant.</li></ul>
+<p>You can change your choice at any time: in Taskel, Settings &gt; Privacy &gt; Personalized ads shows your current state and opens iOS Settings; or go to <strong>iOS Settings &gt; Privacy &amp; Security &gt; Tracking</strong> and turn tracking off or on for Taskel. Taskel applies the change the next time it comes to the foreground.</p>
+<p>“Do Not Track” is a web-browser signal. Taskel is an app and does not respond to it; the iOS tracking choice above is the control we honor.</p>
+<h3>6.3 No consent-management prompt</h3>
+<p>Because Taskel is not offered in the European Economic Area, the United Kingdom, or Switzerland, it does not show a Google consent-management (UMP) prompt. We will add one before offering Taskel in those regions.</p>
+<h3>6.4 Our responsibility</h3>
+<p>Using a third-party advertising SDK does not reduce our responsibility for what it collects. We disclose it here and in the App Store’s App Privacy information, and we will keep both accurate if the SDK changes.</p>
+<h2>7. How We Use Information</h2>
+<p>We use the information in Section 5 only to answer your questions and fix problems you report, to investigate crashes and improve the app, and (through Google) to show and measure ads. We do not use it for profiling beyond that, and we do not sell it to anyone.</p>
+<h2>8. Sharing, and Notice for U.S. State Laws</h2>
+<p>We share information only with the parties described in Sections 5 and 6 (Google, for ads, crash reports, and the contact form), and where required by law or to protect rights, safety, or property.</p>
+<p>We do not sell your information for money. If you allow tracking, <strong>sharing of your device identifier with Google for personalized advertising may count as a “sale” or “share” under some U.S. state privacy laws (for example, California’s)</strong>. You can opt out at any time by turning off tracking for Taskel in iOS Settings &gt; Privacy &amp; Security &gt; Tracking (Section 6.2). People who have not allowed tracking are treated as opted out: Taskel signals Google to restrict data processing for them.</p>
+<h2>9. International Transfers</h2>
+<p>Google processes data in many countries, including outside your own country of residence, under its own policies and safeguards. We do not transfer your habit data anywhere, because we never receive it.</p>
+<h2>10. Retention and Deletion</h2>
+<ul><li><strong>Your Taskel data</strong> stays on your device until you delete it. In Taskel, Settings &gt; Delete All Data removes everything on the device; uninstalling the app removes the app’s data too. Exported backup files are kept where you saved them. Delete them yourself.</li><li><strong>Crash reports</strong> are retained by Google for the period stated in Section 5.3.</li><li><strong>Ad data</strong> held by Google follows Google’s retention policies. Resetting or turning off tracking stops further use of the IDFA for Taskel.</li><li><strong>Contact form submissions</strong> are kept as stated in Section 5.2.</li></ul>
+<h2>11. Your Choices and Rights</h2>
+<ul><li>Turn personalized ads off or on in iOS Settings (Section 6.2).</li><li>Delete your data in the app (Section 10) or export a copy (Section 4).</li><li>Because we hold almost no personal information about you (only what you send through the contact form), requests mostly concern a form submission: ask via the form to see or delete it.</li><li>Rights under the laws of Japan, Australia, New Zealand, and U.S. states (such as access, correction, deletion, and opt-out of sale or sharing) apply where those laws give them to you. Ad data held by Google is requested from Google directly.</li><li>For a question or complaint, contact us (Section 15). You may also contact your local privacy authority.</li></ul>
+<h2>12. Children</h2>
+<p>Taskel is intended for users aged <strong>13 and older</strong>. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has sent us information, contact us (Section 15) and we will delete it. Taskel does not ask your age.</p>
+<h2>13. Security</h2>
+<p>Your data is stored on your device and protected by your device’s own security (passcode, encryption). We do not operate a server holding it. No method of storage or transmission is completely secure. Exported backup files are not encrypted, so keep them somewhere you trust.</p>
+<h2>14. Changes to This Policy</h2>
+<p>We update the “Effective date” and “Version” at the top whenever we change this policy. Minor changes (typos, wording, contact details) just update this page. Material changes (for example, adding a new advertising or analytics SDK or a new use of tracking, offering Taskel in new countries, starting to receive your data on a server, or introducing sign-in or cloud sync in a future version) will also be shown in the app. If Taskel adds sign-in in a later version, we will revise this policy before it ships. This document’s version history is in its public repository.</p>
+<h2>15. Contact Us</h2>
+<p>Questions about this policy or requests about your information: <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUROr77HWACQ8rz2DTfblksosLqy8oML0OHcJef7Gi4M2fZw/viewform">contact form</a></p>
+<div class="draft-banner">
+<p><strong>Draft notes (delete before publishing)</strong></p>
+<p><strong>Changes since 0.3 (now 1.0)</strong></p>
+<ul><li>Resolved: contact-form retention (Section 5.2) now uses the “no longer than necessary” wording (Issue #19 decision).</li><li>Added: Section 5.3 Firebase Crashlytics (Issue #110); Apple moves to 5.4. Sections 3, 6, 7, 8, 10 and 14 updated to mention crash reports.</li><li>Still open: <code><span class="todo">{{TODO:公開日}}</span></code> and this draft status. Do not publish until the Crashlytics implementation (#110) is on develop.</li></ul>
+<p><strong>Changes since 0.2</strong></p>
+<ul><li>Removed: Sign in with Apple / Google, the guest identifier, and the sign-in legal bases (EEA/UK), the EU/UK representative and operator name/address rows. Sign-in is not in v1 (ADR 0013).</li><li>Rewritten: Section 6 now describes shipped ads (AdMob, ATT, no UMP) per <code>docs/ios/ads.md</code> and ADR 0016.</li><li>Added: Section 4 (backup export/import, #103), Section 5.2 (contact form, #106), US state/Do Not Track notice (Section 6.2, 8), countries (Section 2, ADR 0014), age 13+, authorised-user RDP wording.</li></ul>
+<table><thead><tr><th>Placeholder</th><th>Where</th><th>What is needed</th></tr></thead><tbody><tr><td><code><span class="todo">{{TODO:公開日}}</span></code></td><td>Header</td><td>The date this policy goes live</td></tr></tbody></table>
+<p>Decisions already made (Issue #19): operator name and address are not published; contact is the Google Form; minimum age 13; governing law is in the Terms of Use. Before publishing, check that the App Store App Privacy answers match Section 6 and <code>docs/ios/ads.md</code>.</p>
+</div>
 </main>
 
 <footer>
