@@ -3,8 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- 本文が未確定のうちは検索させない。公開（本文確定）時にこの1行を消す。 -->
-<meta name="robots" content="noindex, nofollow">
 <title>Privacy Policy — Taskel</title>
 <link rel="stylesheet" href="./styles.css">
 </head>
@@ -12,21 +10,12 @@
 <header>
   <h1>Taskel Privacy Policy</h1>
   <p class="meta">
-    Effective date: <span class="todo">{{TODO:公開日}}</span> ·
-    Version 1.0 (draft — not yet in force)
+    Effective date: 2026-10-17 ·
+    Version 1.0
   </p>
 </header>
 
 <main>
-  <div class="draft-banner">
-    <p><strong>This is a draft.</strong> It is not yet in force and must not be
-    linked from the App Store listing or from inside the app. Every
-    <span class="todo">{{TODO:…}}</span> marker below is an unresolved item.</p>
-    <p>When all markers are gone, delete this banner, the “Draft notes” box and the
-    <code>noindex</code> meta tag, and set the effective date. The
-    version is already 1.0.</p>
-  </div>
-
 <h2>1. Who We Are</h2>
 <p>Taskel (“<strong>Taskel</strong>,” “<strong>we</strong>,” “<strong>us</strong>”) is a habit and routine management app for iOS, developed and operated by an individual developer. The developer’s name as shown on the App Store listing is the operator’s name.</p>
 <ul><li><strong>Contact:</strong> use the <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUROr77HWACQ8rz2DTfblksosLqy8oML0OHcJef7Gi4M2fZw/viewform">contact form</a> (see Section 5.2). You can also reach it from Settings &gt; Support &gt; Contact in the app.</li><li><strong>Data protection officer / local representatives:</strong> none. Taskel is not offered in the European Union, the United Kingdom, or Canada (Section 2), and we do not run a server that holds your data (Section 3).</li></ul>
@@ -89,15 +78,6 @@
 <p>We update the “Effective date” and “Version” at the top whenever we change this policy. Minor changes (typos, wording, contact details) just update this page. Material changes (for example, adding a new advertising or analytics SDK or a new use of tracking, offering Taskel in new countries, starting to receive your data on a server, or introducing sign-in or cloud sync in a future version) will also be shown in the app. If Taskel adds sign-in in a later version, we will revise this policy before it ships. This document’s version history is in its public repository.</p>
 <h2>15. Contact Us</h2>
 <p>Questions about this policy or requests about your information: <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUROr77HWACQ8rz2DTfblksosLqy8oML0OHcJef7Gi4M2fZw/viewform">contact form</a></p>
-<div class="draft-banner">
-<p><strong>Draft notes (delete before publishing)</strong></p>
-<p><strong>Changes since 0.3 (now 1.0)</strong></p>
-<ul><li>Resolved: contact-form retention (Section 5.2) now uses the “no longer than necessary” wording (Issue #19 decision).</li><li>Added: Section 5.3 Firebase Crashlytics (Issue #110).</li><li>Added: Section 5.4 Google Analytics for Firebase (Issue #112); Apple moves to 5.5. The “does not use Firebase/Google Analytics” and “no other analytics” statements are rewritten. Section 5.3 now says crash reports carry the last Analytics events (the Crashlytics and Analytics link is as instructed in #112; Google’s Crashlytics pages fetched on 2026-10-13 did not state it explicitly, so confirm in the Firebase console). Sections 3, 6, 7, 8, 10, 11 and 14 updated.</li><li>Still open: <code><span class="todo">{{TODO:公開日}}</span></code> and this draft status. Do not publish until the Crashlytics implementation (#110) and the Analytics implementation (#112, including enabling Analytics in Firebase) are on develop.</li></ul>
-<p><strong>Changes since 0.2</strong></p>
-<ul><li>Removed: Sign in with Apple / Google, the guest identifier, and the sign-in legal bases (EEA/UK), the EU/UK representative and operator name/address rows. Sign-in is not in v1 (ADR 0013).</li><li>Rewritten: Section 6 now describes shipped ads (AdMob, ATT, no UMP) per <code>docs/ios/ads.md</code> and ADR 0016.</li><li>Added: Section 4 (backup export/import, #103), Section 5.2 (contact form, #106), US state/Do Not Track notice (Section 6.2, 8), countries (Section 2, ADR 0014), age 13+, authorised-user RDP wording.</li></ul>
-<table><thead><tr><th>Placeholder</th><th>Where</th><th>What is needed</th></tr></thead><tbody><tr><td><code><span class="todo">{{TODO:公開日}}</span></code></td><td>Header</td><td>The date this policy goes live</td></tr></tbody></table>
-<p>Decisions already made (Issue #19): operator name and address are not published; contact is the Google Form; minimum age 13; governing law is in the Terms of Use. Before publishing, check that the App Store App Privacy answers match Section 5.3, 5.4 and 6, <code>docs/ios/ads.md</code> and <code>docs/ios/firebase.md</code>.</p>
-</div>
 </main>
 
 <footer>
